@@ -1,6 +1,6 @@
 #env files
-.env
-
+animation_in_react/.env
+*/.env
 # Logs
 logs
 *.log
