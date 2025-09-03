@@ -1,10 +1,18 @@
 import React from 'react'
 import VideoInput from '../components/Home/VideoInput'
+import HomeHeroText from '../components/Home/HomeHeroText'
+import HomeBottomText from '../components/Home/HomeBottomText'
 
 const Home = () => {
   return (
-    <div className='h-screen w-screen bg-red-900'>
-        <VideoInput/>
+    <div>
+        <div className='h-screen w-screen fixed'>
+            <VideoInput/>
+        </div>
+        <div className='h-screen w-screen relative flex flex-col'>
+            <HomeHeroText/>
+            <HomeBottomText/>
+        </div>
     </div>
   )
 }
