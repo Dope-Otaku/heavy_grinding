@@ -2,10 +2,10 @@
 
 @font-face {
   font-family: fontSmall;
-  src: url(../public/Fonts/Lausanne-300.woff2);
+  src: url(/Fonts/Lausanne-300.woff2);
 }
 
 @font-face {
   font-family: fontLarge;
-  src: url(../public/Fonts/Lausanne-500.woff2);
+  src: url(/Fonts/Lausanne-500.woff2);
 }
