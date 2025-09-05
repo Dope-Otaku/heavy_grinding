@@ -38,7 +38,13 @@ const Agents = () => {
         scrub:true,
         pin:true,
         onUpdate:function(elem){
-          let imageIndex = Math.round(elem.progress * imageArray.length)
+          let imageIndex;
+          if(elem.progress<1){
+            imageIndex = Math.round(elem.progress * imageArray.length)
+          }
+          else{
+            imageIndex = imageArray.length - 1
+          }
           imageChangeRef.current.src = imageArray[imageIndex]
           // console.log(imageArray[imageIndex])
           // console.log(imageChangeRef.current)
