@@ -1,10 +1,26 @@
-import React from 'react'
+import { useRef } from 'react'
+import { useGSAP } from "@gsap/react"
+import gsap from 'gsap'
 
 const Agents = () => {
+  const firstImageDiv = useRef(null)
+
+  useGSAP(function(){
+    gsap.to(firstImageDiv.current,{
+      x:500,
+      repeat:5
+    })
+  })
+
+
+
+
+
+
   return (
     <div>
       <div className='section1'>
-        <div className='absolute overflow-hidden object-cover h-[20vw] w-[15vw]  top-60 left-[30vw] rounded-3xl bg-red-500'>
+        <div ref={firstImageDiv} className='absolute overflow-hidden object-cover h-[20vw] w-[15vw]  top-60 left-[30vw] rounded-3xl bg-red-500'>
           <img src="https://k72.ca/uploads/teamMembers/Carl_480x640-480x640.jpg" alt="" />
         </div>
         <div className=' relative font-[fontLarge]'>
