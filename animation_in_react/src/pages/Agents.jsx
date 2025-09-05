@@ -5,7 +5,28 @@ import { ScrollTrigger } from 'gsap/all'
 
 const Agents = () => {
   gsap.registerPlugin(ScrollTrigger)
+
+  // reffrence section
   const firstImageDiv = useRef(null)
+  const imageChangeRef = useRef(null)
+
+  //image array
+  const imageArray = [
+    'https://k72.ca/uploads/teamMembers/Carl_480x640-480x640.jpg',
+    'https://k72.ca/uploads/teamMembers/Olivier_480x640-480x640.jpg',
+    'https://k72.ca/uploads/teamMembers/Lawrence_480x640-480x640.jpg',
+    'https://k72.ca/uploads/teamMembers/HugoJoseph_480x640-480x640.jpg',
+    'https://k72.ca/uploads/teamMembers/ChantalG_480x640-480x640.jpg',
+    'https://k72.ca/uploads/teamMembers/MyleneS_480x640-480x640.jpg',
+    'https://k72.ca/uploads/teamMembers/SophieA_480x640-480x640.jpg',
+    'https://k72.ca/uploads/teamMembers/Claire_480x640-480x640.jpg',
+    'https://k72.ca/uploads/teamMembers/Michele_480X640-480x640.jpg',
+    'https://k72.ca/uploads/teamMembers/MEL_480X640-480x640.jpg',
+    'https://k72.ca/uploads/teamMembers/CAMILLE_480X640_2-480x640.jpg',
+    'https://k72.ca/uploads/teamMembers/MAXIME_480X640_2-480x640.jpg',
+    'https://k72.ca/uploads/teamMembers/MEGGIE_480X640_2-480x640.jpg',
+    'https://k72.ca/uploads/teamMembers/joel_480X640_3-480x640.jpg',
+  ]
 
   useGSAP(function(){
     gsap.to(firstImageDiv.current,{
@@ -16,6 +37,12 @@ const Agents = () => {
         end:'top -110%',
         scrub:true,
         pin:true,
+        onUpdate:function(elem){
+          let imageIndex = Math.round(elem.progress * imageArray.length)
+          imageChangeRef.current.src = imageArray[imageIndex]
+          // console.log(imageArray[imageIndex])
+          // console.log(imageChangeRef.current)
+        }
       }
     })
   })
@@ -29,7 +56,7 @@ const Agents = () => {
     <div>
       <div className='section1'>
         <div ref={firstImageDiv} className='absolute overflow-hidden object-cover h-[20vw] w-[15vw]  top-60 left-[30vw] rounded-3xl bg-red-500'>
-          <img src="https://k72.ca/uploads/teamMembers/Carl_480x640-480x640.jpg" alt="" />
+          <img ref={imageChangeRef} src="https://k72.ca/uploads/teamMembers/Carl_480x640-480x640.jpg" alt="" />
         </div>
         <div className=' relative font-[fontLarge]'>
           <div className='mt-[56vh]'>
