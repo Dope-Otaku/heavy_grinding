@@ -2,9 +2,11 @@ import React from 'react'
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 import { useRef } from "react"
+import { useLocation } from 'react-router-dom'
 
 const StairsTransition = () => {
     const transitionRef = useRef(null)
+    const pageLocation = useLocation().pathname
 
   useGSAP(function(){
     const tl = gsap.timeline()
@@ -34,7 +36,7 @@ const StairsTransition = () => {
     tl.to('.stairs',{
       y:'0%'
     })
-  })
+  },[pageLocation])
 
 
   return (
