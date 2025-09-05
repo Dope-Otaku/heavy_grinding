@@ -8,8 +8,9 @@ import StairsTransition from './components/common/StairsTransition.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
-      <StairsTransition/>
-      <App />
+      <StairsTransition>
+        <App />
+      </StairsTransition>
     </BrowserRouter>
   </StrictMode>,
 )
