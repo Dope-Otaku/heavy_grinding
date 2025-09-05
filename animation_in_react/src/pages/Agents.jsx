@@ -16,7 +16,7 @@ const Agents = () => {
           </div>
         </div>
       </div>
-      <div className="section2">
+      <div className="section2 h-screen">
       </div>
     </div>
   )
