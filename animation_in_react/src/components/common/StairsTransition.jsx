@@ -9,6 +9,7 @@ const StairsTransition = (props) => {
     const transitionDelay  = useRef(null)
     const pageLocation = useLocation().pathname
 
+    //using gsap function
   useGSAP(function(){
     const tl = gsap.timeline()
 
