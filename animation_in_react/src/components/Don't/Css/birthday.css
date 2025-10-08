@@ -38,23 +38,18 @@ body{
 }
 
 .wrap{
-    background: url('../Assets/gift.png');
+    background-image: url('../Assets/gift.png');
     background-size: cover;
-    position: relative;
-}
-
-.gift-wrap{
-    width: 400px;
-    height: auto;
     border: 4px solid white;
     border-radius: 4px;
-}
-
-.gift-wrap {
-    transition: opacity 0.2s linear;
+    width: 400px;
+    height: 400px;
+    transition: opacity 0.8s linear;
     cursor: pointer;
 }
 
-.gift-wrap:hover {
-    opacity: 0;
+
+.wrap:hover {
+    /* opacity: 0; */
+    background-image: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdHV3YnBtbm4zcTdpc2VuN29sNzJrcDEzNjkyM20wamhlM284NHl5bCZlcD12MV9naWZzX3RyZW5kaW5nJmN0PWc/ItGT4HMGiHfndjFjnd/giphy.gif');
 }
