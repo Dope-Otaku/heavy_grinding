@@ -48,8 +48,16 @@ body{
     cursor: pointer;
 }
 
+.final{
+    height: 200px;
+}
 
-.wrap:hover {
-    /* opacity: 0; */
+#gift1:hover {
     background-image: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdHV3YnBtbm4zcTdpc2VuN29sNzJrcDEzNjkyM20wamhlM284NHl5bCZlcD12MV9naWZzX3RyZW5kaW5nJmN0PWc/ItGT4HMGiHfndjFjnd/giphy.gif');
+}
+#gift2:hover {
+    background-image: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXZ5Y2w5Y2I4bGxuNTZvY2swMWhlMjlzbWV2NzIzdDVxcmF3aDBvciZlcD12MV9naWZzX3RyZW5kaW5nJmN0PWc/UO5elnTqo4vSg/giphy.gif');
+}
+#finalgift:hover {
+    background-image: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdG9kMWJpc3BvNG53eTEyMXJsYjk0aXBtZ3Q0MHRvNzN0M3Rib2huciZlcD12MV9naWZzX3NlYXJjaCZjdD1n/jtbyA4cFpf673UjYPo/giphy.gif');
 }
