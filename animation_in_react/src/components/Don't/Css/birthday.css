@@ -43,6 +43,18 @@ body{
     position: relative;
 }
 
-/* #goof{
-    position: absolute;
-} */
+.gift-wrap{
+    width: 400px;
+    height: auto;
+    border: 4px solid white;
+    border-radius: 4px;
+}
+
+.gift-wrap {
+    transition: opacity 0.2s linear;
+    cursor: pointer;
+}
+
+.gift-wrap:hover {
+    opacity: 0;
+}
