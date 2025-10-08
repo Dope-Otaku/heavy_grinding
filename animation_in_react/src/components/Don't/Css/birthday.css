@@ -24,7 +24,25 @@ body{
     border: 6px solid #efb0c9;
 }
 
-h2, h3{
+#date{
     background-color: #efb0c9;
     padding: 5px 10px;
+    border-radius: 5px;
+    margin: 0;
 }
+#years{
+    background-color: #efb0c9;
+    padding: 5px 10px;
+    border-radius: 5px;
+    
+}
+
+.wrap{
+    background: url('../Assets/gift.png');
+    background-size: cover;
+    position: relative;
+}
+
+/* #goof{
+    position: absolute;
+} */
