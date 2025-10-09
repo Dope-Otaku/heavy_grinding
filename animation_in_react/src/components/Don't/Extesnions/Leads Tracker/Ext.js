@@ -8,7 +8,7 @@ let count = 0
 
 
 
-
+const url = window.URL.parse()
 
 
 
@@ -29,7 +29,7 @@ showInput.addEventListener('click', ()=>{
 
     for(let i=0; i<myLeads.length; i++){
         listItems += "<li>" + `<a href=${myLeads[i]} target='_blank'>` + myLeads[i] +"</a>" + "</li>"
-        itemsClass.innerHTML += listItems
+        itemsClass.innerHTML = listItems
         console.log(localStorage.getItem(`${i}`))
         // console.log(myLeads[i])
     }
