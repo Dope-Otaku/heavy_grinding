@@ -10,12 +10,14 @@
     padding: 10px;
     height: 20px;
 }
-
+.btns{
+    display: flex;
+    flex-direction: row;
+}
 .btn-css{
     width: 100px;
     height: 20px;
     display: flex;
-    flex-direction: row;
     /* margin-top: 10px; */
     background-color: #5f9341;
     /* box-sizing: border-box; */
