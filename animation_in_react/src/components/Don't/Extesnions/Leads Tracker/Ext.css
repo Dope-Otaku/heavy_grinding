@@ -11,10 +11,11 @@
     height: 20px;
 }
 
-#input-btn{
+.btn-css{
     width: 100px;
     height: 20px;
     display: flex;
+    flex-direction: row;
     /* margin-top: 10px; */
     background-color: #5f9341;
     /* box-sizing: border-box; */

@@ -1,9 +1,24 @@
 const saveInput = document.getElementById('input-btn')
+const showInput = document.getElementById('input-btn2')
+const inputFeild = document.getElementById('input-el')
+let myLeads = []
 
-// function inputSaved(){
-//     console.log("save button clicked!")
-// }
+
+
+
+
+
+
+
+
 
 saveInput.addEventListener('click', ()=>{
-    console.log("save button clicked!")
+    let input = inputFeild.value
+    myLeads.push(input)
+    console.log(input)
+    inputFeild.value = ""
+})
+
+showInput.addEventListener('click', ()=>{
+    console.log(myLeads)
 })
