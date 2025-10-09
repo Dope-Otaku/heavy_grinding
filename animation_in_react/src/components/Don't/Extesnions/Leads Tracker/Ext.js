@@ -21,9 +21,11 @@ saveInput.addEventListener('click', ()=>{
 })
 
 showInput.addEventListener('click', ()=>{
-    
+    let listItems = ""
+
     for(let i=0; i<myLeads.length; i++){
-        itemsClass.innerHTML += "<li>" + myLeads[i] + "</li>"
+        listItems += "<li>" + myLeads[i] + "</li>"
+        itemsClass.innerHTML = listItems
         console.log(myLeads[i])
     }
 })
