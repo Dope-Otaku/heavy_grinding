@@ -1,0 +1,10 @@
+.Man-section{
+    display: flex;
+    height: 200px;
+    flex-direction: column;
+    background-color: aqua;
+}
+
+#input-el{
+    border: 2px solid green;
+}
