@@ -2,9 +2,31 @@
     display: flex;
     height: 200px;
     flex-direction: column;
-    background-color: aqua;
 }
 
 #input-el{
-    border: 2px solid green;
+    border: 2px solid #5f9341;
+    /* width: 800px; */
+    padding: 10px;
+    height: 20px;
+}
+
+#input-btn{
+    width: 100px;
+    height: 20px;
+    display: flex;
+    /* margin-top: 10px; */
+    background-color: #5f9341;
+    /* box-sizing: border-box; */
+    padding: 20px 20px 20px 20px;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    margin: 2px 15px 15px 0px;
+    color: white;
+    border-radius: 2px;
+    cursor: pointer;
+    text-shadow: 0px 0px 0.9px black;
+    font-size: medium;
+    
 }
