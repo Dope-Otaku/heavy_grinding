@@ -29,6 +29,7 @@
     border-radius: 8px;
     height: 30px;
     
+    
 }
 
 .search-container:hover{
@@ -37,6 +38,7 @@
 }
 input[type="search"]:focus{
     outline: none;
+    
 }
 
 #search-form, #query-bar{
