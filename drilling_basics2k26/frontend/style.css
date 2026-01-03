@@ -11,10 +11,30 @@
     justify-content: space-between;
     margin: 20px;
     overflow: hidden;
+    /* height: 5vh; */
 }
 
 .active{
     color: white;
     text-decoration: none;
     text-transform: uppercase;
+}
+
+.search-container{
+    border: 1px solid white;
+    box-sizing: border-box;
+    padding: 2px;
+    border-radius: 8px;
+    height: 30px;
+    
+}
+input[type="search"]:focus{
+    outline: none;
+}
+
+#search-form, #query-bar{
+    padding: 2px;
+    border: none;
+    /* border: 1px solid green; */
+    color: white;
 }
