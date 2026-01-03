@@ -46,3 +46,37 @@ input[type="search"]:focus{
     /* border: 1px solid green; */
     color: white;
 }
+
+
+.columns{
+    display: flex;
+    justify-content: center;
+    box-sizing: content-box;
+    height: 50vh;
+    width: 19vw;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 20px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid green; */
+    overflow: hidden;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.movie-img{
+    /* background: transparent; */
+    height: 41vh;
+    width: 20vw;
+    border-radius: 20px;
+    
+}
+
+.movie-title{
+    color: white;
+    text-transform: capitalize;
+}
