@@ -12,3 +12,9 @@
     margin: 20px;
     overflow: hidden;
 }
+
+.active{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
