@@ -83,3 +83,17 @@ input[type="search"]:focus{
     color: white;
     text-transform: capitalize;
 }
+
+
+#section-block{
+    /* display: grid;
+    grid-row: auto;
+    overflow: hidden; .by uncommenting this we will get our caraousel effect */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Adjust column size */
+    grid-auto-rows: minmax(100px, auto); /* Row size */
+    gap: 10px; /* Space between items */
+    overflow-y: auto; /* Allow vertical scrolling */
+    max-height: 80vh; /* Limit height to make it scrollable */
+    padding: 20px;
+}
