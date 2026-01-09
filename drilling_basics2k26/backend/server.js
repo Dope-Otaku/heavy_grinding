@@ -1,6 +1,6 @@
 import express from "express"
 import cors from "cors"
-import reviews from "./api/reviews.route.js" //for url we are creating a new folders from where all the routes will be stored
+// import reviews from "./api/reviews.route.js" //for url we are creating a new folders from where all the routes will be stored
 
 
 const app = express()
@@ -9,8 +9,8 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-app.use("/api/v1/reviews", reviews)
-app.use("*", (req, res)=>res.status(404).json({error: "pitched in wrong page"}))
+// app.use("/api/v1/reviews", reviews)
+// app.use("*", (req, res)=>res.status(404).json({error: "pitched in wrong page"}))
 
 
 
