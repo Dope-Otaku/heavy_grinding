@@ -12,39 +12,21 @@ const mongo_uri = `mongodb+srv://${mongo_username}:${mongo_password}@cluster0.wx
 const mongo_db = process.env.MONGO_DB
 const port = 8000
 
-// mongoClient.connect(mongo_uri, 
-//     {
-//         maxPoolSize: 50,
-//         wtimeoutMS: 2500,
-//         // useNewUrlParser: true
-//     }
-// ).catch(err => {
-//     console.error(err.stack)
-//     process.exit(1)
-// }).then(async client => {
-//     app.listen(8000, ()=>{
-//         console.log(`server is active: ${mongo_username}:${mongo_password}:${mongo_uri}`)
-//     })
-// })
 
-
-
-async function connectToDatabase(){
+//need to create a async function for connection with mongodb
+const connectDatabase = async() =>{
     const client = new mongoClient(mongo_uri)
 
     try {
         await client.connect()
-        console.log("connected successfully to mongodb")
+        console.log("connected with mongodb")
 
-        const db = client.db('reviews')
-        console.log(`connected successfully to ${mongo_db}`)
-
+        const db = client.db()
+        console.log(`${db} : connected with the table ${mongo_db}`)
     } catch (error) {
-        console.error(error)
-    }
-    finally{
-        await client.close()
+        console.error('connection failed', error)
+        process.exit(1);
     }
 }
 
-connectToDatabase().catch(console.error);
+connectDatabase()
