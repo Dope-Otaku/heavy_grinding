@@ -40,4 +40,20 @@ export default class ReviewsDAO{
             return {error: e}
         }
     }
+
+    static async updateReview(reviewId, user, review){
+        try {
+            const reviewDoc = {
+                _id: ObjectId(reviewId),
+                $set: {
+                    user: user,
+                    review: review
+                }
+            }
+            return await reviews.updateOne(reviewDoc)
+        } catch (e) {
+            console.error(`Unable to Post review : ${e}`)
+            return {error: e}
+        }
+    }
 }
