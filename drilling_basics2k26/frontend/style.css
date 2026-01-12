@@ -3,7 +3,9 @@
     border: 0px;
     padding: 0px;
 }
-
+body{
+    color: white;
+}
 
 .nav-bar{
     display: flex;
