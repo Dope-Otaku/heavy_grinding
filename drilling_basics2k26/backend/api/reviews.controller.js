@@ -1,4 +1,3 @@
-import reviewsDAO from "../dao/reviewsDAO.js"
 import ReviewsDAO from "../dao/reviewsDAO.js"
 
 
