@@ -31,4 +31,13 @@ export default class ReviewsDAO{
             return {error: e}
         }
     }
+
+    static async getReview(reviewId){
+        try {
+            return await reviews.findOne({_id: ObjectId(reviewId)})
+        } catch (e) {
+            console.error(`Unable to fetch review : ${e}`)
+            return {error: e}
+        }
+    }
 }
