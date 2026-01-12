@@ -1,5 +1,5 @@
 import mongodb from 'mongodb'
-const ObjectId = mongodb.ObjectId
+const ObjectId =  mongodb.ObjectId
 
 
 
@@ -37,7 +37,7 @@ export default class ReviewsDAO{
 
     static async getReview(reviewId){
         try {
-            const reviewResponse = await reviews.findOne({_id: ObjectId(reviewId)})
+            const reviewResponse = await reviews.findOne({_id: new ObjectId(reviewId)})
             return reviewResponse
         } catch (e) {
             console.error(`Unable to fetch review : ${e}`)
@@ -64,7 +64,7 @@ export default class ReviewsDAO{
 
     static async deleteReview(reviewId){
         try {
-            const reviewResponse = await reviews.deleteOne({_id: ObjectId(reviewId)})
+            const reviewResponse = await reviews.deleteOne({_id: new ObjectId(reviewId)})
             return reviewResponse
         } catch (e) {
             console.error(`Unable to fetch review : ${e}`)
