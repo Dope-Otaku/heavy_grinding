@@ -1,6 +1,6 @@
 import app from "./server.js"
 import mongodb, { ServerApiVersion } from "mongodb"
-// import reviews from "./api/reviews.route.js"
+import ReviewsDAO from "./dao/reviewsDAO.js"
 
 
 
