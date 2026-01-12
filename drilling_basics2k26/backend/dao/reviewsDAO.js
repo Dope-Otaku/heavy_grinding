@@ -3,16 +3,19 @@ const ObjectId = mongodb.ObjectId
 
 
 
-let reviews
+let reviews;
+// console.log(`It should be undefined or nulll here: ${reviews}`)
 
 
 export default class ReviewsDAO{
-    static async injectDB(conn){
+    static async injectDB(client){
         if(reviews){
-            return
+            return;
         }
         try {
-            await conn.db("reviews").collection("reviews")
+            reviews = await client.db("reviews").collection("reviews")
+            console.log("connected with mongodb successfully")
+            // console.log(reviews)
         } catch (e) {
             console.error(`Unable to establish Data Collection handles : ${e}`)
         }

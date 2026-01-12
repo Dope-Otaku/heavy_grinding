@@ -1,5 +1,5 @@
 import app from "./server.js"
-import mongodb from "mongodb"
+import mongodb, {ServerApiVersion, MongoClient} from "mongodb"
 import ReviewsDAO from "./dao/reviewsDAO.js"
 
 
@@ -15,14 +15,22 @@ const port = 8000
 
 //need to create a async function for connection with mongodb
 const connectDatabase = async() =>{
-    const client = new mongoClient(mongo_uri)
+    const client = new mongoClient(mongo_uri, {
+        serverApi: {
+            version: mongodb.ServerApiVersion.v1,
+            strict: true,
+            deprecationErrors: true,
+        },
+        autoSelectFamily: false, // Explicitly disable auto selection of IP family
+    })
 
     try {
         await client.connect()
         console.log("connected with mongodb")
 
         // const db = client.db()
-        // console.log(`${db} : connected with the table ${mongo_db}`)
+        // const db = await client.db("reviews").collection("reviews")
+        // console.log(`${db} : connected with the table ${mongo_db}:${db}`)
 
         await ReviewsDAO.injectDB(client)
 
@@ -35,10 +43,10 @@ const connectDatabase = async() =>{
         process.exit(1);
     }
     // just using this for now: testing period
-    finally{
-        console.log("application closed")
-        process.exit(1);
-    }
+    // finally{
+    //     console.log("application closed")
+    //     process.exit(1);
+    // }
 }
 
 connectDatabase()
