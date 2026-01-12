@@ -1,6 +1,6 @@
 import app from "./server.js"
 import mongodb, { ServerApiVersion } from "mongodb"
-import reviews from "./api/reviews.route.js"
+// import reviews from "./api/reviews.route.js"
 
 
 
@@ -23,15 +23,18 @@ const connectDatabase = async() =>{
 
         const db = client.db()
         console.log(`${db} : connected with the table ${mongo_db}`)
+        app.listen(port, ()=>{
+            console.log(`server started at ${port}`)
+        })
     } catch (error) {
         console.error('connection failed', error)
         process.exit(1);
     }
     //just using this for now: testing period
-    finally{
-        console.log("application closed")
-        process.exit(1);
-    }
+    // finally{
+    //     console.log("application closed")
+    //     process.exit(1);
+    // }
 }
 
 connectDatabase()
