@@ -50,9 +50,19 @@ export default class ReviewsDAO{
                     review: review
                 }
             }
-            return await reviews.updateOne(reviewDoc)
+            const updatedResponse =  await reviews.updateOne(reviewDoc)
+            return updatedResponse
         } catch (e) {
             console.error(`Unable to Post review : ${e}`)
+            return {error: e}
+        }
+    }
+
+    static async deleteReview(reviewId){
+        try {
+            return await reviews.findOne({_id: ObjectId(reviewId)})
+        } catch (e) {
+            console.error(`Unable to fetch review : ${e}`)
             return {error: e}
         }
     }
