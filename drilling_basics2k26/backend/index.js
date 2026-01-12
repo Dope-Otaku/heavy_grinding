@@ -1,5 +1,5 @@
 import app from "./server.js"
-import mongodb, { ServerApiVersion } from "mongodb"
+import mongodb from "mongodb"
 import ReviewsDAO from "./dao/reviewsDAO.js"
 
 
@@ -23,6 +23,10 @@ const connectDatabase = async() =>{
 
         const db = client.db()
         console.log(`${db} : connected with the table ${mongo_db}`)
+
+        await ReviewsDAO.injectDB(client)
+
+        //server part
         app.listen(port, ()=>{
             console.log(`server started at ${port}`)
         })
@@ -30,11 +34,11 @@ const connectDatabase = async() =>{
         console.error('connection failed', error)
         process.exit(1);
     }
-    //just using this for now: testing period
-    // finally{
-    //     console.log("application closed")
-    //     process.exit(1);
-    // }
+    // just using this for now: testing period
+    finally{
+        console.log("application closed")
+        process.exit(1);
+    }
 }
 
 connectDatabase()
