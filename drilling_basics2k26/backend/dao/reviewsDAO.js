@@ -34,7 +34,8 @@ export default class ReviewsDAO{
 
     static async getReview(reviewId){
         try {
-            return await reviews.findOne({_id: ObjectId(reviewId)})
+            const reviewResponse = await reviews.findOne({_id: ObjectId(reviewId)})
+            return reviewResponse
         } catch (e) {
             console.error(`Unable to fetch review : ${e}`)
             return {error: e}
@@ -60,7 +61,8 @@ export default class ReviewsDAO{
 
     static async deleteReview(reviewId){
         try {
-            return await reviews.findOne({_id: ObjectId(reviewId)})
+            const reviewResponse = await reviews.deleteOne({_id: ObjectId(reviewId)})
+            return reviewResponse
         } catch (e) {
             console.error(`Unable to fetch review : ${e}`)
             return {error: e}
