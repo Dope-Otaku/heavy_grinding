@@ -59,7 +59,7 @@ export default class ReviewsController {
             }
 
 
-            res.send(review)
+            res.send(reviewResponse)
 
         } catch (e) {
             res.status(500).json({error: e.message})
