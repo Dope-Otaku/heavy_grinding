@@ -1,6 +1,6 @@
 import app from "./server.js"
 import mongodb, { ServerApiVersion } from "mongodb"
-// import reviewsDAO from "./dao/reviewsDAO.js"
+import reviews from "./api/reviews.route.js"
 
 
 
@@ -27,6 +27,7 @@ const connectDatabase = async() =>{
         console.error('connection failed', error)
         process.exit(1);
     }
+    //just using this for now: testing period
     finally{
         console.log("application closed")
         process.exit(1);
