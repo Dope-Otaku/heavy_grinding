@@ -1,5 +1,22 @@
-import express from 'express'
+import ReviewsDAO from "../dao/reviewsDAO.js"
 
 
-const router = express.Router()
+export default class ReviewsController {
+    static async apiPostReview(req, res, next){
+        try {
+            const movieId = req.body.movieId
+            const review = req.body.review
+            const user = req.body.user
 
+            const reviewResponse = await ReviewsDAO.addReview(
+                movieId,
+                review,
+                user
+            )
+            res.json({status: "success"})
+
+        } catch (e) {
+            res.status(500).json({error: e.message})
+        }
+    }
+}
