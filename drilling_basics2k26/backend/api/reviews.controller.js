@@ -77,4 +77,19 @@ export default class ReviewsController {
             res.status(500).json({error: e.message})
         }
     }
+
+    static async apiGetReviews(req, res, next){
+        try {
+            let id = req.params.id || {}
+            let reviews = await ReviewsDAO.getReviewsByMovieId(id)
+            if(!review){
+                res.status(404).json({error: "not found"})
+                return
+            }
+            res.send(reviews)
+
+        } catch (e) {
+            res.status(500).json({error: e.message})
+        }
+    }
 }
