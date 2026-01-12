@@ -1,3 +1,4 @@
+import reviewsDAO from "../dao/reviewsDAO.js"
 import ReviewsDAO from "../dao/reviewsDAO.js"
 
 
@@ -28,6 +29,37 @@ export default class ReviewsController {
                 res.status(404).json({error: "not found"})
                 return
             }
+            res.send(review)
+
+        } catch (e) {
+            res.status(500).json({error: e.message})
+        }
+    }
+
+    static async apiUpdateReview(req, res, next){
+        try {
+            const reviewId = req.params.id 
+            const review = req.body.review
+            const user = req.body.user
+
+            const reviewResponse = await reviewsDAO.updateReview(
+                reviewId,
+                user,
+                review
+            )
+
+            var {error} = reviewResponse
+            if(error){
+                res.status(400).json({error})
+            }
+
+            if(reviewResponse.modifiedCount === 0){
+                throw new Error(
+                    "Unable to update review",
+                )
+            }
+
+
             res.send(review)
 
         } catch (e) {
