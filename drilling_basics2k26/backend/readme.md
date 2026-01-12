@@ -16,3 +16,7 @@ to post :: ``` curl -X POST http://localhost:8000/api/v1/reviews/new -H "Content
 
 to get :: ``` curl -X GET http://localhost:8000/api/v1/reviews/6964eb8421712b6b6bb53766   ```
 to delete :: ``` curl -X DEL http://localhost:8000/api/v1/reviews/6964eb8421712b6b6bb53766   ```
+
+
+mongodb issue:
+<h3>sometimes it will give you issues while connecting with db|| either whitelist your ip or allow every users for a limited time || it's an mongodb internal issue</h3>
