@@ -27,6 +27,10 @@ const connectDatabase = async() =>{
         console.error('connection failed', error)
         process.exit(1);
     }
+    finally{
+        console.log("application closed")
+        process.exit(1);
+    }
 }
 
 connectDatabase()
