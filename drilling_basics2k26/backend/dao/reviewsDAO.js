@@ -68,4 +68,14 @@ export default class ReviewsDAO{
             return {error: e}
         }
     }
+
+    static async getReviewsByMovieId(movieID){
+        try {
+            const allReviews =   await reviews.find({movieID: parseInt(movieID)})
+            return allReviews.toArray()
+        } catch (e) {
+            console.error(`Unable to Post review : ${e}`)
+            return {error: e}
+        }
+    }
 }
