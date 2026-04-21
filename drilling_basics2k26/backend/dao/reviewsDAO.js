@@ -5,6 +5,7 @@ const ObjectId =  mongodb.ObjectId
 
 let reviews;
 // console.log(`It should be undefined or nulll here: ${reviews}`)
+// console.log(`It should be undefined or nulll here: ${reviews}`)
 
 
 export default class ReviewsDAO{
