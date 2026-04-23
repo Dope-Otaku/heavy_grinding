@@ -15,7 +15,7 @@ export default class ReviewsDAO{
         try {
             reviews = await client.db("reviews").collection("reviews")
             console.log("connected with mongodb successfully")
-            // console.log(reviews)
+            console.log(reviews)
         } catch (e) {
             console.error(`Unable to establish Data Collection handles : ${e}`)
         }
