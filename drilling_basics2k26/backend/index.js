@@ -34,7 +34,7 @@ const connectDatabase = async() =>{
 
         await ReviewsDAO.injectDB(client)
 
-        //server part
+        //server start
         app.listen(port, ()=>{
             console.log(`server started at ${port}`)
         })
