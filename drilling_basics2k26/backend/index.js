@@ -31,6 +31,7 @@ const connectDatabase = async() =>{
         // const db = client.db()
         // const db = await client.db("reviews").collection("reviews")
         // console.log(`${db} : connected with the table ${mongo_db}:${db}`)
+        // console.log(`${db} : connected with the table ${mongo_db}:${db}`)
 
         await ReviewsDAO.injectDB(client)
 
