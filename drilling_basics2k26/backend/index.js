@@ -44,7 +44,6 @@ const connectDatabase = async() =>{
         process.exit(1);
     }
     // just using this for now: testing period
-    // just using this for now: testing period
     // finally{
     //     console.log("application closed")
     //     process.exit(1);
