@@ -5,63 +5,63 @@ import { useRef } from "react"
 import { useLocation } from 'react-router-dom'
 
 const StairsTransition = (props) => {
-    const transitionRef = useRef(null)
-    const transitionDelay  = useRef(null)
-    const pageLocation = useLocation().pathname
+  const transitionRef = useRef(null)
+  const transitionDelay = useRef(null)
+  const pageLocation = useLocation().pathname
 
-    //using gsap function
-  useGSAP(function(){
+  //using gsap function ...
+  useGSAP(function () {
     const tl = gsap.timeline()
 
-    tl.to(transitionRef.current,{
+    tl.to(transitionRef.current, {
       display: 'block'
     })
 
-    tl.from('.stairs',{
-      height:0,
-      stagger:{
+    tl.from('.stairs', {
+      height: 0,
+      stagger: {
         amount: -0.3
       }
     })
 
-    tl.to('.stairs',{
-      y:'100%',
-      stagger:{
+    tl.to('.stairs', {
+      y: '100%',
+      stagger: {
         amount: -0.3
       }
     })
 
-    tl.to(transitionRef.current,{
+    tl.to(transitionRef.current, {
       display: 'none'
     })
 
-    tl.to('.stairs',{
-      y:'0%'
+    tl.to('.stairs', {
+      y: '0%'
     })
 
-    gsap.from(transitionDelay.current,{
-        opacity:0,
-        delay:1.2,
-        scale:1.3
+    gsap.from(transitionDelay.current, {
+      opacity: 0,
+      delay: 1.2,
+      scale: 1.3
     })
 
-  },[pageLocation])
+  }, [pageLocation])
 
 
   return (
     <div>
-        <div ref={transitionDelay}>
-            {props.children}
+      <div ref={transitionDelay}>
+        {props.children}
+      </div>
+      <div ref={transitionRef} className="h-screen w-full fixed z-20 top-0">
+        <div className="h-full w-full flex">
+          <div className="stairs h-full w-1/5 bg-black"></div>
+          <div className="stairs h-full w-1/5 bg-black"></div>
+          <div className="stairs h-full w-1/5 bg-black"></div>
+          <div className="stairs h-full w-1/5 bg-black"></div>
+          <div className="stairs h-full w-1/5 bg-black"></div>
         </div>
-        <div ref={transitionRef} className="h-screen w-full fixed z-20 top-0">
-            <div className="h-full w-full flex">
-            <div className="stairs h-full w-1/5 bg-black"></div>
-            <div className="stairs h-full w-1/5 bg-black"></div>
-            <div className="stairs h-full w-1/5 bg-black"></div>
-            <div className="stairs h-full w-1/5 bg-black"></div>
-            <div className="stairs h-full w-1/5 bg-black"></div>
-            </div>
-        </div>
+      </div>
     </div>
   )
 }
