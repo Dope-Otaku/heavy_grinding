@@ -30,7 +30,7 @@ const StairsTransition = (props) => {
         amount: -0.3
       }
     })
-    //transistion from 0
+    //transistion from 0 to 100 
     tl.to(transitionRef.current, {
       display: 'none'
     })
