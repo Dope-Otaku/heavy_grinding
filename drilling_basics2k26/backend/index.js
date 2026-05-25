@@ -37,7 +37,7 @@ const connectDatabase = async() =>{
 
         //server start
         app.listen(port, ()=>{
-            console.log(`server started at ${port}bhox`) //port 8000
+            console.log(`server started at ${port}box`) //port 8000
         })
     } catch (error) {
         console.error('connection failed', error)
