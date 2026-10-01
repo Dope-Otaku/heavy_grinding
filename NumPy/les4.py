@@ -20,3 +20,16 @@ print(np.sqrt(numArray))
 print(np.round(numArray))
 print(np.floor(numArray))
 print(np.ceil(numArray))
+
+
+# element wise arithmetic
+
+a1 = np.array([1,2,3])
+a2 = np.array([4,5,6])
+
+print(a1 + a2)
+print(a1 - a2)
+print(a1 * a2)
+print(a1 / a2)
+print(a1 // a2)
+print(a1 ** a2)
