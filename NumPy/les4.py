@@ -33,3 +33,12 @@ print(a1 * a2)
 print(a1 / a2)
 print(a1 // a2)
 print(a1 ** a2)
+
+
+# comparison operators
+scores = np.array([100, 39, 55, 68])
+
+print(scores == 100)
+print(scores > 39)
+
+#basically checking for comparison normally
