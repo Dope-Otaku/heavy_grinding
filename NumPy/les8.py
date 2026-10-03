@@ -18,5 +18,6 @@ print(np.random.uniform(low=-1, high=1, size=(3, 2)))
 #shuffling data in array
 
 new = np.array([1, 2, 3, 4, 5])
+new1 = np.array([1, 2, 3, 4, 5])
 # print(rng.shuffle(new))
 print(rng.choice(new, size=(3,3)))
