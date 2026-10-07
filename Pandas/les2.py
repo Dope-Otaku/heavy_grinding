@@ -8,5 +8,6 @@ data = {
 }
 
 df = pd.DataFrame(data)
-print(df.loc[3])
-print(df)
+print(df.loc[df["name"]=="taniyaa"])
+print(df.iloc[3,1])
+# print(df)
