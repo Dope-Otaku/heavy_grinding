@@ -7,7 +7,7 @@ data = {
     "job": [None, None, None, None, None, None, None]
 }
 
-df = pd.DataFrame(data)
+df = pd.DataFrame(data, index=["p1","p2","p3","p4","p5","p6","p7"])
 print(df.loc[df["name"]=="taniyaa"])
-print(df.iloc[3,1])
+print(df.iloc[0:3,0])
 # print(df)
