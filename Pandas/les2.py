@@ -10,10 +10,13 @@ data = {
 df = pd.DataFrame(data, index=["p1","p2","p3","p4","p5","p6","p7"])
 # print(df.loc[df["name"]=="taniyaa"])
 # print(df.iloc[0:3,0])
-# print(df)
 
 #adding a row in data frame
 new_row = pd.DataFrame([{"name":"shubh","age":8,"job":None}], index=["p8"])
 
+# adding a column in dataframe
+df["disabled"] = ["yes", "no", 3, 4, 5, 67, 8]
+
 new_df = pd.concat([df, new_row])
 print(new_df)
+print(df)
